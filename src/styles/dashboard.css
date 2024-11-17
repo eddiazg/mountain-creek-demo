@@ -1,0 +1,76 @@
+/* Sidebar container */
+.sidebar {
+  background-color: #34495e; /* Azul oscuro-gris */
+  color: white;
+  width: 180px; /* Sidebar colapsado */
+  left: 0px;
+  height: 100vh;
+  position: fixed;
+  transition: width 0.3s ease; /* Animación al expandirse */
+  border-top-right-radius: 20px; /* Esquinas redondeadas */
+  border-bottom-right-radius: 20px;
+  overflow: hidden; /* Esconde contenido al estar colapsado */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar:hover {
+  width: 220px; /* Expande al pasar el cursor */
+}
+
+/* Sidebar title */
+.sidebar-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px 0;
+  margin: 0;
+  background-color: #282c34; /* Match del header */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 0.4rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.nav-link i {
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.main-content {
+  margin-left: 180px; /* Espacio para el sidebar */
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar:hover + .main-content {
+  margin-left: 40px; /* Ajusta el contenido al expandirse */
+  transition: margin-left 0.5s ease;
+}
+
+/* Contenedor del dropdown */
+
+.drop-container {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.drop-option {
+  width: 60%;
+  max-width: none;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

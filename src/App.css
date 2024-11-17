@@ -1,0 +1,89 @@
+/* Import Bootstrap */
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css');
+
+/* General App Styles */
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+  /*position: relative;*/
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  position: relative;
+  display: flex;
+  /*overflow: hidden;
+  /*width: 100%;*/
+}
+
+.title {
+  font-size: calc(10px + 2vmin);
+  font-weight: bold;
+  white-space: nowrap;
+  animation: scroll-title 10s linear infinite;
+}
+
+/* Scroll animation for the title */
+@keyframes scroll-title {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Main Content Styles */
+.main-content {
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 60vh;
+}
+
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Links */
+.App-link {
+  color: #61dafb;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.App-link:hover {
+  color: #21a1f1;
+  transform: scale(1.05);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .title {
+    font-size: calc(10px + 3vmin);
+    animation-duration: 15s; /* Slower for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: calc(12px + 4vmin);
+    animation-duration: 20s; /* Even slower for very small screens */
+  }
+}
