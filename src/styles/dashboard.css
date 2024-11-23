@@ -7,14 +7,10 @@
   height: 100vh;
   position: fixed;
   transition: width 0.3s ease; /* Animación al expandirse */
-  border-top-right-radius: 20px; /* Esquinas redondeadas */
   border-bottom-right-radius: 20px;
   overflow: hidden; /* Esconde contenido al estar colapsado */
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.sidebar:hover {
-  width: 220px; /* Expande al pasar el cursor */
+  width: 220px;
 }
 
 /* Sidebar title */
@@ -54,11 +50,6 @@
   transition: margin-left 0.3s ease;
 }
 
-.sidebar:hover + .main-content {
-  margin-left: 40px; /* Ajusta el contenido al expandirse */
-  transition: margin-left 0.5s ease;
-}
-
 /* Contenedor del dropdown */
 
 .drop-container {
@@ -74,3 +65,4 @@
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
