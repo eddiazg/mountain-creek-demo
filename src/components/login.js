@@ -33,10 +33,10 @@ const Login = ({ onLogin }) => { // Recibiendo onLogin como prop
     <div className="login-container">
       <div className="login-box">
         <img src={logo} alt="Mountain Creek Advisors Logo" className="logo" />
-        <h2>Iniciar Sesión</h2>
+        <h2>Welcome</h2>
         <form onSubmit={handleLogin}>
           <div className="form-group">
-            <label>Usuario</label>
+            <label>User</label>
             <input
               type="text"
               value={username}
@@ -45,7 +45,7 @@ const Login = ({ onLogin }) => { // Recibiendo onLogin como prop
             />
           </div>
           <div className="form-group">
-            <label>Contraseña</label>
+            <label>Password</label>
             <input
               type="password"
               value={password}
@@ -54,7 +54,7 @@ const Login = ({ onLogin }) => { // Recibiendo onLogin como prop
             />
           </div>
           {error && <p className="error">{error}</p>}
-          <button type="submit" className="login-button">Ingresar</button>
+          <button type="submit" className="login-button">Login</button>
         </form>
       </div>
     </div>

@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTachometerAlt, faChartPie, faCogs, faFileAlt } from '@fortawesome/free-solid-svg-icons';
 import '../styles/dashboard.css';
 
 const Dashboard = () => {
@@ -29,33 +27,6 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard d-flex">
-      {/* Sidebar */}
-      <aside className="sidebar">
-        <h2 className="sidebar-title">Menu</h2>
-        <ul className="nav flex-column">
-          <li className="nav-item">
-            <a className="nav-link active" href="#">
-              <FontAwesomeIcon icon={faTachometerAlt} /> <span>Dashboard</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              <FontAwesomeIcon icon={faChartPie} /> <span>Investments</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              <FontAwesomeIcon icon={faFileAlt} /> <span>Reports</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              <FontAwesomeIcon icon={faCogs} /> <span>Settings</span>
-            </a>
-          </li>
-        </ul>
-      </aside>
-
       {/* Main Content */}
       <main className="main-content container-fluid">
         <div className="row">
