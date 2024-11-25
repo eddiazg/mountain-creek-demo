@@ -1,0 +1,87 @@
+/* Styling the Table */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Merge borders for a cleaner look */
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow around the table */
+}
+
+/* Table Header */
+th {
+  background-color: #cfe2ff; /* Green background */
+  color: black;
+  text-align: left;
+  padding: 12px 15px; /* Padding inside header cells */
+  font-weight: bold;
+  border: 1px solid #ddd; /* Border for the header */
+}
+
+/* Table Body (Data rows) */
+td {
+  text-align: left;
+  /*padding: 10px 15px; /* Padding inside the data cells */
+  border: 1px solid #ddd; /* Light border for data cells */
+  font-size: 14px;
+  color: #333; /* Darker text color for better contrast */
+}
+
+/* Zebra Striping for better readability */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover Effect on Rows */
+tr:hover {
+  background-color: #f1f1f1; /* Light gray on hover */
+}
+
+/* Responsive Table: Stacking for small screens */
+@media (max-width: 768px) {
+  table {
+    width: 100%;
+    display: block;
+    overflow-x: auto; /* Allow horizontal scrolling on small screens */
+    -webkit-overflow-scrolling: touch;
+  }
+  th, td {
+    display: block;
+    width: 100%;
+    text-align: right;
+    padding: 8px 12px;
+    box-sizing: border-box; /* Ensure padding does not affect width */
+  }
+
+  th {
+    background-color: #cfe2ff; /* Green header for mobile as well */
+    color: black;
+    font-weight: bold;
+  }
+
+  td {
+    text-align: left;
+    background-color: #f4f4f4;
+    margin-bottom: 5px;
+  }
+}
+
+/* Styling the table header for better contrast */
+th {
+  font-size: 16px;
+  background-color: #cfe2ff;
+  color: black;
+}
+
+/* Add a subtle shadow to table */
+table {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Add padding to the table container */
+table-container {
+  padding: 15px;
+}
+
+/* Customize table border */
+td, th {
+  border: 1px solid #ddd;
+}

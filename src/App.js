@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Login from "./components/login.js";
 import Dashboard from "./components/dashboard.js";
 import Investment from "./components/invesment.js";
+import Attributes from "./components/attributes.js";
 import "./App.css"; // Import the updated CSS file
 import logo from '../src/commons/image.png'; // Asegúrate de tener la imagen en public
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -71,6 +72,10 @@ function App() {
           <Route
             path="/investment"
             element={<Investment/>}
+          />
+          <Route
+            path="/attributes"
+            element={isLoggedIn ? <Attributes /> : <Login onLogin={handleLogin} />}
           />
         </Routes>
       </main>
