@@ -1,3 +1,9 @@
+
+
 .table td:hover{
-    background-color: #b8b095;
+    background-color: #d1dfbb;
+}
+
+.total-row{
+    background-color: #d8cdbf !important;
 }

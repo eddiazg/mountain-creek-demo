@@ -87,3 +87,11 @@
     animation-duration: 20s; /* Even slower for very small screens */
   }
 }
+
+.header-logo {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 200px; /* Match the header height */
+  width: auto; /* Maintain aspect ratio */
+}

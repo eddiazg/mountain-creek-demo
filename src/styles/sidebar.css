@@ -1,0 +1,58 @@
+/* Sidebar general */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #1e1e2d; /* Fondo oscuro */
+    color: #fff;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+   
+  /* Estilo de los enlaces del menú */
+  .menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+  }
+   
+  .menu-item .icon {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+   
+  .menu-item:hover {
+    background-color: #2e2e4e; /* Fondo al pasar el mouse */
+  }
+   
+  .menu-item.active {
+    background-color: #5900ff; /* Fondo del elemento activo */
+    color: #fff;
+  }
+
+  .text{
+    color: #fff;
+  }
+
+  /* Estilos para el contenedor del logo */
+  .logo {
+    display: flex; /* Usamos flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 120px; /* Altura ajustada para que el logo quede más destacado */
+    margin-bottom: 20px; /* Espacio inferior del logo */
+    margin-left: 70px; /* Espacio inferior del logo */
+  }
+   
+  /* Imagen del logo */
+  .logo-img {
+    max-width: 100%; /* Ajusta el ancho máximo */
+    max-height: 100px; /* Limita la altura máxima */
+    object-fit: contain; /* Mantiene las proporciones del logo */
+    border-radius: 8px;
+  }

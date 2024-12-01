@@ -17,8 +17,8 @@ const Attributes = () => {
   return (
     <div>
       <h1>Rental Unit Information</h1>
-      <table border="1" cellPadding="10" cellSpacing="0">
-        <thead>
+      <table border="1" cellPadding="10" cellSpacing="0"  class="table">
+        <thead  class="table-dark">
           <tr>
             <th>Unit Name</th>
             <th>Bedrooms</th>
