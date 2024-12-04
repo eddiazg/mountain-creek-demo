@@ -8,6 +8,7 @@ import Sidebar from "./components/sidebar.js";
 import "./App.css"; // Import the updated CSS file
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTachometerAlt, faChartPie, faCogs, faFileAlt } from '@fortawesome/free-solid-svg-icons';
+import Footer from "./components/footer.js";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -26,6 +27,7 @@ function App() {
       <div className="d-flex">
         {/* Sidebar */}
         {isLoggedIn && <Sidebar />}
+        
       </div>
       
       {/* Routes */}
@@ -46,6 +48,7 @@ function App() {
           />
         </Routes>
       </main>
+      <Footer />
     </div>
   );
 }

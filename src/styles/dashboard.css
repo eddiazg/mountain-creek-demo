@@ -2,7 +2,7 @@
 .sidebar {
   background-color: #34495e; /* Azul oscuro-gris */
   color: white;
-  width: 180px; /* Sidebar colapsado */
+  width: 220px; /* Sidebar colapsado */
   left: 0px;
   height: 100vh;
   position: fixed;
@@ -10,7 +10,6 @@
   border-bottom-right-radius: 20px;
   overflow: hidden; /* Esconde contenido al estar colapsado */
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  width: 220px;
 }
 
 /* Sidebar title */
@@ -24,45 +23,164 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.nav-link {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  border-radius: 0.4rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+/* Dashboard Container */
+.dashboard {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background-color: #f4f6f9;
+  margin-left: 220px; /* Ensure content is placed next to sidebar */
 }
 
-.nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: translateX(5px);
-}
-
-.nav-link i {
-  font-size: 1.2rem;
-  margin-right: 15px;
-}
-
+/* Main Content */
 .main-content {
-  margin-left: 180px; /* Espacio para el sidebar */
-  transition: margin-left 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* Contenedor del dropdown */
-
-.drop-container {
-  padding-top: 10px;
-  padding-bottom: 20px;
+/* Dropdown Section */
+.dropdown-container {
+  margin-bottom: 20px;
 }
 
-.drop-option {
-  width: 60%;
-  max-width: none;
-  height: 40px;
-  padding: 5px;
+.dropdown {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+.dropdown:hover {
+  background-color: #f0f0f0;
+}
+
+/* Information Card */
+.info-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-card .card-body {
+  padding: 15px;
+}
+
+.info-card .card-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.info-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Tabs Section */
+.tabs-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabs-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.tabs-header {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tab-button {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.tab-button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.tab-button:hover {
+  background-color: #e2e6ea;
+}
+
+/* Responsive Design for Tablet and Mobile Screens */
+@media (max-width: 1024px) {
+  /* Collapse Sidebar on medium screen sizes */
+  .sidebar {
+    width: 60px; /* Sidebar shrinks to 60px */
+  }
+
+  .dashboard {
+    margin-left: 60px; /* Adjust content margin to match collapsed sidebar */
+  }
+
+  /* Dropdown Section */
+  .dropdown {
+    font-size: 14px;
+  }
+
+  /* Information Container */
+  .info-container, .tabs-container {
+    padding: 15px;
+  }
+
+  .tabs-header {
+    flex-direction: column;
+  }
+
+  .tab-button {
+    margin-bottom: 10px;
+  }
+}
+
+/* Extra Small Devices (Mobile) */
+@media (max-width: 480px) {
+  /* Sidebar will be hidden completely */
+  .sidebar {
+    display: none; /* Hide the sidebar */
+  }
+
+  /* Adjust content for mobile */
+  .dashboard {
+    margin-left: 0; /* No margin needed when sidebar is hidden */
+    padding: 15px;
+  }
+
+  /* Dropdown */
+  .dropdown {
+    font-size: 14px;
+  }
+
+  /* Information Card */
+  .info-card p {
+    font-size: 0.9rem;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .tab-button {
+    font-size: 0.9rem;
+  }
+}
