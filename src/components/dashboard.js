@@ -26,13 +26,13 @@ const Dashboard = () => {
   if (!selectedInvestment) return <div>Loading...</div>;
 
   return (
-    <div className="dashboard">
+    <div className="dashboard d-flex">
       {/* Main Content */}
-      <main className="main-content">
+      <main className="main-content container-fluid">
         <div className="row">
           {/* Dropdown */}
-          <div className="dropdown-container col-12 col-md-3">
-            <select className="dropdown" onChange={handleDropdownChange}>
+          <div className="drop-container">
+            <select className="drop-option" onChange={handleDropdownChange}>
               {investments.map(investment => (
                 <option key={investment.id} value={investment.id}>
                   {investment.name}
@@ -41,8 +41,8 @@ const Dashboard = () => {
             </select>
           </div>
           {/* Information Section */}
-          <div className="info-container col-12 col-md-9">
-            <div className="info-card">
+          <div className="col-12">
+            <div className="info card mb-3">
               <div className="card-body">
                 <h5 className="card-title">Details for {selectedInvestment.name}</h5>
                 <p><strong>A Legal Entity:</strong> {selectedInvestment.details.legalEntity}</p>
@@ -56,25 +56,29 @@ const Dashboard = () => {
             </div>
           </div>
 
-          {/* Tabs Section */}
-          <div className="tabs-container col-12">
-            <div className="tabs-card">
-              <div className="tabs-header">
-                {Object.keys(selectedInvestment.tabs).map(tabId => (
-                  <button
-                    key={tabId}
-                    className={`tab-button ${activeTab === tabId ? 'active' : ''}`}
-                    onClick={() => setActiveTab(tabId)}
-                  >
-                    Tab #{tabId}
-                  </button>
-                ))}
-              </div>
-              <div className="tabs-body">
-                {selectedInvestment.tabs[activeTab]}
+            {/* Tabs Section */}
+            <div className="col-12">
+              <div className="tabs card">
+                <div className="card-header d-flex">
+                  {Object.keys(selectedInvestment.tabs).map(tabId => (
+                    <button
+                      key={tabId}
+                      className={`btn ${activeTab === tabId ? 'btn-primary' : 'btn-outline-secondary'} flex-grow-1`}
+                      onClick={() => setActiveTab(tabId)}
+                    >
+                      {selectedInvestment.tabs[tabId].name}
+                    </button>
+                  ))}
+                </div>
+                <div className="card-body">
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: selectedInvestment.tabs[activeTab]?.content || '<p>No content available.</p>',
+                    }}
+                  ></div>
+                </div>
               </div>
             </div>
-          </div>
         </div>
       </main>
     </div>

@@ -2,7 +2,7 @@
 table {
   width: 100%;
   border-collapse: collapse; /* Merge borders for a cleaner look */
-  margin-top: 20px;
+  margin-top: 0px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow around the table */
 }
 
@@ -67,6 +67,7 @@ tr:hover {
 /* Add a subtle shadow to table */
 table {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
 }
 
 /* Add padding to the table container */

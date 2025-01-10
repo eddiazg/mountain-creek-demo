@@ -1,43 +1,66 @@
 {
-    "investments": [
-      {
-        "id": 1,
-        "name": "Investment A",
-        "details": {
-          "legalEntity": "Entity A",
-          "investmentVehicle": "Vehicle A",
-          "investor": "Investor A",
-          "commitments": "Commitment A",
-          "demographics": "Demographic A",
-          "unitDetails": "Unit A",
-          "transactionalData": "Data A"
-        },
-        "tabs": {
-          "1": "Content #1 of Tab 1",
-          "2": "Content #2 of Tab 2",
-          "3": "Content #3 of Tab 3",
-          "4": "Content #4 of Tab 4"
-        }
+  "investments": [
+    {
+      "id": 1,
+      "name": "Investment A",
+      "details": {
+        "legalEntity": "Entity A",
+        "investmentVehicle": "Vehicle A",
+        "investor": "Investor A",
+        "commitments": "Commitment A",
+        "demographics": "Demographic A",
+        "unitDetails": "Unit A",
+        "transactionalData": "Data A"
       },
-      {
-        "id": 2,
-        "name": "Investment B",
-        "details": {
-          "legalEntity": "Entity B",
-          "investmentVehicle": "Vehicle B",
-          "investor": "Investor B",
-          "commitments": "Commitment B",
-          "demographics": "Demographic B",
-          "unitDetails": "Unit B",
-          "transactionalData": "Data B"
+      "tabs": {
+        "1": {
+          "name": "Fund Overview",
+          "content": "<h2>Fund Overview</h2><p>This is an overview of the fund. Key highlights include diversified assets and strategic growth initiatives.</p>"
         },
-        "tabs": {
-          "1": "Content #1 of Tab 1",
-          "2": "Content #2 of Tab 2",
-          "3": "Content #3 of Tab 3",
-          "4": "Content #4 of Tab 4"
+        "2": {
+          "name": "Property Management Dashboard",
+          "content": "<h2>Property Management Dashboard</h2><ul><li>Occupied Units: 85%</li><li>Maintenance Requests: 12</li><li>Monthly Revenue: $25,000</li></ul>"
+        },
+        "3": {
+          "name": "Rental Income and Expense Tracker",
+          "content": "<h2>Rental Income and Expense Tracker</h2><table class='table table-bordered'><thead><tr class='bg-primary text-white'><th>Month</th><th>Income</th><th>Expenses</th></tr></thead><tbody><tr><td>January</td><td>$10,000</td><td>$3,000</td></tr><tr><td>February</td><td>$11,000</td><td>$3,500</td></tr></tbody></table>"
+        },
+        "4": {
+          "name": "Additional Information",
+          "content": "<h2>Additional Information</h2><p>Explore more data and insights about this investment.</p>"
         }
       }
-    ]
-  }
-  
+    },
+    {
+      "id": 2,
+      "name": "Investment B",
+      "details": {
+        "legalEntity": "Entity B",
+        "investmentVehicle": "Vehicle B",
+        "investor": "Investor B",
+        "commitments": "Commitment B",
+        "demographics": "Demographic B",
+        "unitDetails": "Unit B",
+        "transactionalData": "Data B"
+      },
+      "tabs": {
+        "1": {
+          "name": "Fund Overview",
+          "content": "<h2>Fund Overview</h2><p>Investment B focuses on stable returns with a low-risk portfolio structure.</p>"
+        },
+        "2": {
+          "name": "Property Management Dashboard",
+          "content": "<h2>Property Management Dashboard</h2><ul><li>Occupied Units: 90%</li><li>Maintenance Requests: 8</li><li>Monthly Revenue: $30,000</li></ul>"
+        },
+        "3": {
+          "name": "Rental Income and Expense Tracker",
+          "content": "<h2 class='btn btn-primary text-white'>Rental Income and Expense Tracker</h2><table class='table table-bordered'><thead><tr class='bg-primary text-white'><th>Month</th><th>Income</th><th>Expenses</th></tr></thead><tbody><tr><td>January</td><td>$15,000</td><td>$4,000</td></tr><tr><td>February</td><td>$16,000</td><td>$4,500</td></tr></tbody></table>"
+        },
+        "4": {
+          "name": "Additional Information",
+          "content": "<h2>Additional Information</h2><p>Further insights into the operational strategies of Investment B.</p>"
+        }
+      }
+    }
+  ]
+}

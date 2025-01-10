@@ -7,3 +7,12 @@
 .total-row{
     background-color: #d8cdbf !important;
 }
+
+.excel-button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-top: 30px;
+    padding-right: 40px;
+    padding-bottom: 0px;
+}
