@@ -1,34 +1,46 @@
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
-import React, { useState } from "react";
 import Login from "./components/login.js";
 import Dashboard from "./components/dashboard.js";
 import Investment from "./components/invesment.js";
 import Attributes from "./components/attributes.js";
 import Sidebar from "./components/sidebar.js";
-import "./App.css"; // Import the updated CSS file
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTachometerAlt, faChartPie, faCogs, faFileAlt } from '@fortawesome/free-solid-svg-icons';
+import "./App.css";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
-
-  // Custom hook for navigation
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
-  // Handle login process and navigate to dashboard
+  // Verifica el estado de sesión al cargar la app
+  useEffect(() => {
+    const storedSession = localStorage.getItem("isLoggedIn");
+    if (storedSession === "true") {
+      setIsLoggedIn(true);
+    }
+  }, []); // Solo se ejecuta al montar el componente
+
+  // Actualiza localStorage cuando cambia el estado
+  useEffect(() => {
+    localStorage.setItem("isLoggedIn", isLoggedIn);
+  }, [isLoggedIn]);
+
   const handleLogin = () => {
     setIsLoggedIn(true);
-    navigate("/dashboard"); // Redirect to dashboard after login
+    navigate("/dashboard");
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    localStorage.removeItem("isLoggedIn");
+    navigate("/");
   };
 
   return (
     <div className="App">
       <div className="d-flex">
-        {/* Sidebar */}
-        {isLoggedIn && <Sidebar />}
+        {isLoggedIn && <Sidebar onLogout={handleLogout} />}
       </div>
-      
-      {/* Routes */}
+
       <main className="main-content container">
         <Routes>
           <Route path="/" element={<Login onLogin={handleLogin} />} />
@@ -38,7 +50,7 @@ function App() {
           />
           <Route
             path="/investment"
-            element={<Investment/>}
+            element={isLoggedIn ? <Investment /> : <Login onLogin={handleLogin} />}
           />
           <Route
             path="/attributes"

@@ -56,25 +56,29 @@ const Dashboard = () => {
             </div>
           </div>
 
-          {/* Tabs Section */}
-          <div className="col-12">
-            <div className="tabs card">
-              <div className="card-header d-flex">
-                {Object.keys(selectedInvestment.tabs).map(tabId => (
-                  <button
-                    key={tabId}
-                    className={`btn ${activeTab === tabId ? 'btn-primary' : 'btn-outline-secondary'} flex-grow-1`}
-                    onClick={() => setActiveTab(tabId)}
-                  >
-                    Tab #{tabId}
-                  </button>
-                ))}
-              </div>
-              <div className="card-body">
-                {selectedInvestment.tabs[activeTab]}
+            {/* Tabs Section */}
+            <div className="col-12">
+              <div className="tabs card">
+                <div className="card-header d-flex">
+                  {Object.keys(selectedInvestment.tabs).map(tabId => (
+                    <button
+                      key={tabId}
+                      className={`btn ${activeTab === tabId ? 'btn-primary' : 'btn-outline-secondary'} flex-grow-1`}
+                      onClick={() => setActiveTab(tabId)}
+                    >
+                      {selectedInvestment.tabs[tabId].name}
+                    </button>
+                  ))}
+                </div>
+                <div className="card-body">
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: selectedInvestment.tabs[activeTab]?.content || '<p>No content available.</p>',
+                    }}
+                  ></div>
+                </div>
               </div>
             </div>
-          </div>
         </div>
       </main>
     </div>
